@@ -24,7 +24,6 @@ ENV/
 # ===== DJANGO =====
 db.sqlite3
 staticfiles/
-media/
 
 # ===== LOGS =====
 *.log
