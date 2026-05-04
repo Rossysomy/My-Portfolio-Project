@@ -40,6 +40,14 @@ class Project(models.Model):
     def tools_list(self):
         return [t.strip() for t in self.tools_used.split(',') if t.strip()]
 
+    @property
+    def image_url(self):
+        if self.image:
+            import os
+            filename = os.path.basename(str(self.image))
+            return f'/static/images/projects/{filename}'
+        return ''
+
 
 class ContactMessage(models.Model):
     name = models.CharField(max_length=150)

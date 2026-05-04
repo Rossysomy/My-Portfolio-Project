@@ -42,7 +42,7 @@
           <source src="{{ project.video.url }}" type="video/mp4">
         </video>
         {% elif project.image %}
-        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="img-fluid rounded-card mb-4 w-100" style="object-fit:cover;max-height:400px;" />
+        <img src="{{ project.image_url }}" alt="{{ project.title }}" class="img-fluid rounded-card mb-4 w-100" style="object-fit:cover;max-height:400px;" />
         {% endif %}
 
         <div class="detail-section">
