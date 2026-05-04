@@ -1,0 +1,153 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{{ project.title }} | Rosemary Dimakunne{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-3">
+      <ol class="breadcrumb breadcrumb-dark">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'projects' %}">Projects</a></li>
+        <li class="breadcrumb-item active">{{ project.title }}</li>
+      </ol>
+    </nav>
+    <div class="row">
+      <div class="col-lg-8">
+        <span class="project-category-badge mb-3 d-inline-block">{{ project.get_category_display }}</span>
+        <h1 class="page-header-title">{{ project.title }}</h1>
+        <div class="project-meta d-flex flex-wrap gap-4 mt-3">
+          {% if project.client_or_company %}
+          <span><i class="bi bi-building me-2"></i>{{ project.client_or_company }}</span>
+          {% endif %}
+          {% if project.duration %}
+          <span><i class="bi bi-clock me-2"></i>{{ project.duration }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Main Content -->
+      <div class="col-lg-8">
+        {% if project.video %}
+        <video controls class="w-100 rounded-card mb-4" style="max-height:480px;background:#000;">
+          <source src="{{ project.video.url }}" type="video/mp4">
+        </video>
+        {% elif project.image %}
+        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="img-fluid rounded-card mb-4 w-100" style="object-fit:cover;max-height:400px;" />
+        {% endif %}
+
+        <div class="detail-section">
+          <h3 class="detail-section-title"><i class="bi bi-file-text me-2"></i>Overview</h3>
+          <div class="detail-body">{{ project.description|linebreaks }}</div>
+        </div>
+
+        {% if project.outcome %}
+        <div class="detail-section mt-4">
+          <h3 class="detail-section-title"><i class="bi bi-graph-up-arrow me-2"></i>Outcomes &amp; Impact</h3>
+          <div class="detail-body outcome-body">{{ project.outcome|linebreaks }}</div>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="detail-sidebar">
+          <div class="sidebar-section">
+            <h4 class="sidebar-heading">Tools &amp; Technologies</h4>
+            <div class="project-tools mt-3">
+              {% for tool in project.tools_list %}
+              <span class="tool-tag">{{ tool }}</span>
+              {% endfor %}
+            </div>
+          </div>
+
+          {% if project.client_or_company %}
+          <div class="sidebar-section">
+            <h4 class="sidebar-heading">Organisation</h4>
+            <p>{{ project.client_or_company }}</p>
+          </div>
+          {% endif %}
+
+          {% if project.duration %}
+          <div class="sidebar-section">
+            <h4 class="sidebar-heading">Duration</h4>
+            <p>{{ project.duration }}</p>
+          </div>
+          {% endif %}
+
+          <div class="sidebar-section">
+            <h4 class="sidebar-heading">Category</h4>
+            <p>{{ project.get_category_display }}</p>
+          </div>
+
+          {% if project.live_url or project.github_url or project.project_file %}
+          <div class="sidebar-section">
+            <h4 class="sidebar-heading">Project Links</h4>
+            {% if project.live_url %}
+            <a href="{{ project.live_url }}" target="_blank" rel="noopener" class="btn btn-primary-custom w-100 mb-2">
+              <i class="bi bi-box-arrow-up-right me-2"></i>Live Demo
+            </a>
+            {% endif %}
+            {% if project.github_url %}
+            <a href="{{ project.github_url }}" target="_blank" rel="noopener" class="btn btn-outline-custom w-100 mb-2">
+              <i class="bi bi-github me-2"></i>View on GitHub
+            </a>
+            {% endif %}
+            {% if project.project_file %}
+            <a href="{{ project.project_file.url }}" download class="btn btn-outline-custom w-100">
+              <i class="bi bi-file-zip me-2"></i>Download Workflows
+            </a>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          <div class="sidebar-cta mt-4">
+            <p class="mb-3">Interested in a similar outcome for your organisation?</p>
+            <a href="{% url 'contact' %}" class="btn btn-primary-custom w-100">
+              <i class="bi bi-send me-2"></i>Let's Talk
+            </a>
+            <a href="{% url 'projects' %}" class="btn btn-outline-custom w-100 mt-2">
+              <i class="bi bi-arrow-left me-2"></i>Back to Projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Projects -->
+    {% if related %}
+    <div class="mt-5 pt-4 border-top-subtle">
+      <h3 class="mb-4">Related Projects</h3>
+      <div class="row g-4">
+        {% for rp in related %}
+        <div class="col-md-4">
+          <div class="project-card h-100">
+            <div class="project-card-header">
+              <span class="project-category-badge">{{ rp.get_category_display }}</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">{{ rp.title }}</h3>
+              <p class="project-desc">{{ rp.short_description }}</p>
+            </div>
+            <div class="project-card-footer">
+              <a href="{% url 'project_detail' rp.pk %}" class="btn-card-link">View <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

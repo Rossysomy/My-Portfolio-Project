@@ -1,0 +1,206 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Resume | Rosemary Dimakunne{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container text-center">
+    <div class="section-label">Credentials</div>
+    <h1 class="page-header-title">Resume &amp; CV</h1>
+    <p class="page-header-sub">Download my full resume or review a summary of my qualifications below.</p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <!-- Download CTA -->
+        <div class="resume-download-card text-center mb-5">
+          <div class="resume-download-icon"><i class="bi bi-file-earmark-person"></i></div>
+          <h2 class="mb-2">Rosemary Dimakunne</h2>
+          <p class="text-muted mb-4">IT Business Analyst &amp; Project Manager</p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="{% static 'resume/Rosemary_Dimakunne_Resume.pdf' %}" download class="btn btn-primary-custom btn-lg">
+              <i class="bi bi-file-earmark-arrow-down me-2"></i>Download PDF Resume
+            </a>
+            <a href="{% url 'contact' %}" class="btn btn-outline-custom btn-lg">
+              <i class="bi bi-send me-2"></i>Request Updated CV
+            </a>
+          </div>
+        </div>
+
+        <!-- Resume Preview -->
+        <div class="resume-preview">
+
+          <!-- Header -->
+          <div class="resume-section resume-header-block">
+            <h2 class="resume-name">Rosemary Dimakunne, PMP</h2>
+            <p class="resume-headline">IT Business Analyst &amp; Project Manager</p>
+            <div class="resume-contact-row">
+              <span><i class="bi bi-telephone me-1"></i>(346) 652-1816</span>
+              <span><i class="bi bi-envelope me-1"></i>dimakunnerosemaryc@gmail.com</span>
+              <span><i class="bi bi-linkedin me-1"></i>linkedin.com/in/rosemary-dimakunne-</span>
+              <span><i class="bi bi-geo-alt me-1"></i>Texas, United States</span>
+            </div>
+          </div>
+
+          <!-- Professional Summary -->
+          <div class="resume-section">
+            <h3 class="resume-section-title">Career Profile</h3>
+            <p>
+              Certified Project Manager, Technical Business Analyst, and cybersecurity enthusiast with over 5 years of experience leading IT
+              system/software development initiatives, digital transformation, and security-focused projects across
+              banking, fintech, and logistics. Skilled in requirements elicitation, business process analysis, SDLC
+              activities, and Agile delivery. Proficient in risk assessment, security compliance (PCI DSS, SOC 2,
+              GDPR), and integrating cybersecurity best practices into IT solutions. Adept at collaborating with
+              product owners to translate roadmaps into secure, scalable solutions. Enthusiastically seeking roles
+              in Technical Business Analysis, Project Management, and GRC.
+            </p>
+          </div>
+
+          <!-- Core Competencies -->
+          <div class="resume-section">
+            <h3 class="resume-section-title">Technical Skills</h3>
+            <div class="resume-competencies">
+              <span>JIRA</span><span>Confluence</span><span>Microsoft Project</span>
+              <span>Lucidchart</span><span>Visio</span><span>SharePoint</span>
+              <span>SQL</span><span>Tableau</span><span>Power BI</span>
+              <span>Agile</span><span>Scrum</span><span>SDLC</span>
+              <span>Business Process Modeling</span><span>PCI DSS</span><span>SOC 2</span>
+              <span>GDPR</span><span>NIST 800-53</span><span>Kali Linux</span>
+            </div>
+          </div>
+
+          <!-- Work Experience -->
+          <div class="resume-section">
+            <h3 class="resume-section-title">Work Experience</h3>
+
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <div>
+                  <h4 class="resume-job-title">Information Security Graduate Teaching Assistant</h4>
+                  <p class="resume-job-company">Baylor University &nbsp;·&nbsp; Waco, Texas</p>
+                </div>
+                <span class="resume-job-date">2024 – Present</span>
+              </div>
+              <ul>
+                <li>Support instruction and grading for Information Security courses, focusing on encryption, network defense, and vulnerability management using Kali Linux and NIST 800-53.</li>
+                <li>Lead students in hands-on cybersecurity labs, assisting with secure system configurations, threat analysis, and research on risk and intrusion detection.</li>
+              </ul>
+            </div>
+
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <div>
+                  <h4 class="resume-job-title">IT Business Analyst / Project Manager</h4>
+                  <p class="resume-job-company">Access Bank PLC &nbsp;·&nbsp; Lagos, Nigeria</p>
+                </div>
+                <span class="resume-job-date">2022 – 2024</span>
+              </div>
+              <ul>
+                <li>Conducted requirements elicitation and developed BRDs, UAT scripts, and functional specifications, ensuring 100% test coverage and reducing post-deployment defects by 30%.</li>
+                <li>Partnered with product owners, security teams, and cross-functional stakeholders to design 15 new ATM features, increasing recurring revenue by 70% and strengthening regulatory compliance.</li>
+                <li>Applied Agile and Scrum methodologies to manage software development projects, accelerating delivery timelines by 20% and improving process turnaround time by 50%.</li>
+                <li>Supervised and coached junior analysts during requirements analysis, aligning deliverables with business objectives.</li>
+                <li>Guided QA and UAT teams in incorporating security test cases, improving product resilience against cyber threats.</li>
+              </ul>
+            </div>
+
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <div>
+                  <h4 class="resume-job-title">IT Business Analyst / Project Manager</h4>
+                  <p class="resume-job-company">Seaavin Limited &nbsp;·&nbsp; Lagos, Nigeria</p>
+                </div>
+                <span class="resume-job-date">2018 – 2022</span>
+              </div>
+              <ul>
+                <li>Introduced Agile Scrum practices including backlog refinement and velocity tracking, boosting team velocity by 50% and cutting delivery cycles by 30% in the first year.</li>
+                <li>Introduced security-focused user stories and requirements during system analysis workshops, lowering post-deployment security incidents by 20%.</li>
+                <li>Coordinated sprint ceremonies, planning, reviews, and retrospectives, raising productivity by 10% and satisfaction by 15%.</li>
+                <li>Established strong client engagement through regular updates and scope alignment, reducing escalations by 40% and boosting delivery confidence ratings by 25%.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="resume-section">
+            <h3 class="resume-section-title">Education</h3>
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <div>
+                  <h4 class="resume-job-title">MS Information Systems — Concentration in Cyber Security</h4>
+                  <p class="resume-job-company">Baylor University &nbsp;·&nbsp; Waco, Texas &nbsp;·&nbsp; GPA 3.72</p>
+                </div>
+                <span class="resume-job-date">May 2026</span>
+              </div>
+            </div>
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <div>
+                  <h4 class="resume-job-title">MSc Computer Science</h4>
+                  <p class="resume-job-company">Imo State University &nbsp;·&nbsp; Nigeria &nbsp;·&nbsp; GPA 4.28</p>
+                </div>
+                <span class="resume-job-date">December 2021</span>
+              </div>
+            </div>
+            <div class="resume-job">
+              <div class="resume-job-header">
+                <div>
+                  <h4 class="resume-job-title">BSc Computer Science</h4>
+                  <p class="resume-job-company">Imo State University &nbsp;·&nbsp; Nigeria &nbsp;·&nbsp; GPA 4.13</p>
+                </div>
+                <span class="resume-job-date">September 2016</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="resume-section">
+            <h3 class="resume-section-title">Certifications</h3>
+            <ul class="resume-certs-list">
+              <li>Project Management Professional (PMP)</li>
+              <li>CompTIA Security+</li>
+              <li>Scrum Agile Master Certified (SAMC)</li>
+              <li>Six Sigma Yellow Belt</li>
+              <li>Product Management</li>
+            </ul>
+          </div>
+
+          <!-- Professional Associations -->
+          <div class="resume-section">
+            <h3 class="resume-section-title">Professional Associations</h3>
+            <ul class="resume-certs-list">
+              <li>Women in Cybersecurity (WiCyS)</li>
+              <li>Project Management Institute (PMI)</li>
+              <li>International Institute of Business Analysis (IIBA)</li>
+              <li>Society of Women Engineers (SWE)</li>
+              <li>Fellow, AI Management &amp; Finance Institute (AIMFIN)</li>
+            </ul>
+          </div>
+
+          <!-- Volunteer -->
+          <div class="resume-section">
+            <h3 class="resume-section-title">Volunteer Experience</h3>
+            <p>Empowering Nigerian Girls in New Enterprise — Mentored 15 young girls on digital skills and career planning.</p>
+          </div>
+
+        </div><!-- /resume-preview -->
+
+        <!-- Bottom Download -->
+        <div class="text-center mt-5">
+          <a href="{% static 'resume/Rosemary_Dimakunne_Resume.pdf' %}" download class="btn btn-primary-custom btn-lg">
+            <i class="bi bi-file-earmark-arrow-down me-2"></i>Download Full PDF Resume
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

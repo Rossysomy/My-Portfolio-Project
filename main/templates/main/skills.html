@@ -1,0 +1,185 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Skills | Rosemary Dimakunne{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container text-center">
+    <div class="section-label">Capabilities</div>
+    <h1 class="page-header-title">Skills &amp; Tools</h1>
+    <p class="page-header-sub">
+      A broad and deep toolkit spanning business analysis, project management, data, and stakeholder engagement.
+    </p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+
+    <!-- Core Skills Grid -->
+    <div class="row g-4 mb-5">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="bi bi-diagram-3-fill"></i></div>
+            <h3>Business Analysis</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Requirements Elicitation &amp; Documentation</li>
+            <li>Business Requirements Documents (BRD)</li>
+            <li>Functional Specifications (FRD)</li>
+            <li>Gap Analysis</li>
+            <li>Process Mapping &amp; BPMN 2.0</li>
+            <li>Use Case Modelling &amp; UML</li>
+            <li>User Story Writing &amp; Backlog Management</li>
+            <li>Stakeholder Interviews &amp; Workshops</li>
+            <li>UAT Planning &amp; Execution</li>
+            <li>AS-IS / TO-BE Analysis</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="bi bi-kanban-fill"></i></div>
+            <h3>Project Management</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Agile / Scrum / Kanban</li>
+            <li>Waterfall &amp; Hybrid Delivery</li>
+            <li>Project Planning &amp; Scheduling</li>
+            <li>Risk &amp; Issue Management (RAID)</li>
+            <li>Budget Tracking &amp; Cost Control</li>
+            <li>Change Management</li>
+            <li>Vendor Management</li>
+            <li>Stakeholder Communication Plans</li>
+            <li>Sprint Planning &amp; Retrospectives</li>
+            <li>Status Reporting to Executive Level</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="bi bi-bar-chart-line-fill"></i></div>
+            <h3>Data &amp; Analytics</h3>
+          </div>
+          <ul class="skill-list">
+            <li>SQL (queries, joins, aggregations)</li>
+            <li>Microsoft Power BI</li>
+            <li>Tableau (intermediate)</li>
+            <li>Advanced Microsoft Excel &amp; Pivot Tables</li>
+            <li>Data Visualisation &amp; Storytelling</li>
+            <li>KPI Definition &amp; Dashboard Design</li>
+            <li>Data Mapping &amp; Data Flow Diagrams</li>
+            <li>Reporting &amp; Insight Delivery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="bi bi-tools"></i></div>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Jira &amp; Confluence</li>
+            <li>Microsoft Project</li>
+            <li>Lucidchart &amp; Microsoft Visio</li>
+            <li>Microsoft Office 365 Suite</li>
+            <li>SharePoint</li>
+            <li>SQL</li>
+            <li>Microsoft Power BI</li>
+            <li>Tableau</li>
+            <li>Kali Linux</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="bi bi-people-fill"></i></div>
+            <h3>Soft Skills &amp; Leadership</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Stakeholder Engagement &amp; Negotiation</li>
+            <li>Executive Communication &amp; Presentations</li>
+            <li>Facilitation &amp; Workshop Design</li>
+            <li>Cross-functional Team Leadership</li>
+            <li>Conflict Resolution</li>
+            <li>Strategic Thinking</li>
+            <li>Problem Solving &amp; Critical Analysis</li>
+            <li>Mentoring &amp; Knowledge Transfer</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="bi bi-shield-check-fill"></i></div>
+            <h3>Cybersecurity &amp; GRC</h3>
+          </div>
+          <ul class="skill-list">
+            <li>PCI DSS</li>
+            <li>SOC 2</li>
+            <li>GDPR</li>
+            <li>NIST 800-53</li>
+            <li>Risk Assessment &amp; Management</li>
+            <li>Vulnerability Management</li>
+            <li>Encryption &amp; Network Defense</li>
+            <li>Threat Analysis &amp; Intrusion Detection</li>
+            <li>Security Test Case Design</li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+
+    <!-- Proficiency Bars -->
+    <div class="proficiency-section mt-2">
+      <h2 class="text-center mb-5">Key Tool Proficiency</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          {% for name, pct in proficiency_items %}
+          <div class="proficiency-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="prof-label">{{ name }}</span>
+              <span class="prof-pct">{{ pct }}%</span>
+            </div>
+            <div class="prof-bar">
+              <div class="prof-fill" style="width: {{ pct }}%"></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner section-pad">
+  <div class="container text-center">
+    <h2 class="cta-title">Looking for these skills on your team?</h2>
+    <p class="cta-body">Let's explore how I can contribute to your organisation's goals.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+      <a href="{% url 'contact' %}" class="btn btn-primary-custom btn-lg">
+        <i class="bi bi-send-fill me-2"></i>Contact Me
+      </a>
+      <a href="{% url 'resume' %}" class="btn btn-outline-light-custom btn-lg">
+        <i class="bi bi-file-earmark-arrow-down me-2"></i>Download Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

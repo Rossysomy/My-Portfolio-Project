@@ -1,0 +1,48 @@
+# ===== ENVIRONMENT & SECRETS =====
+.env
+.env.*
+*.env
+
+# ===== PYTHON =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ===== VIRTUAL ENVIRONMENT =====
+venv/
+env/
+.venv/
+ENV/
+
+# ===== DJANGO =====
+db.sqlite3
+staticfiles/
+media/
+
+# ===== LOGS =====
+*.log
+logs/
+
+# ===== macOS =====
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ===== MISC =====
+*.bak
+*.swp
+*.tmp
+Thumbs.db

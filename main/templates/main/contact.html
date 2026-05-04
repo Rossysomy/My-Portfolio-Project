@@ -1,0 +1,124 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Contact | Rosemary Dimakunne{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container text-center">
+    <div class="section-label">Get In Touch</div>
+    <h1 class="page-header-title">Let's Connect</h1>
+    <p class="page-header-sub">
+      Whether you have a job opportunity, a project, a question, or just want to say hello —
+      I'd love to hear from you.
+    </p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-5 justify-content-center">
+
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <div class="contact-info-block">
+          <h3 class="contact-info-title">Contact Details</h3>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+            <div>
+              <p class="contact-info-label">Email</p>
+              <a href="mailto:dimakunnerosemaryc@gmail.com">dimakunnerosemaryc@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="bi bi-linkedin"></i></div>
+            <div>
+              <p class="contact-info-label">LinkedIn</p>
+              <a href="https://linkedin.com/in/" target="_blank" rel="noopener">linkedin.com/in/rosemary-dimakunne</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <div>
+              <p class="contact-info-label">Location</p>
+              <p>Texas, United States</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="bi bi-clock-fill"></i></div>
+            <div>
+              <p class="contact-info-label">Response Time</p>
+              <p>Typically within 24–48 hours</p>
+            </div>
+          </div>
+
+          <div class="contact-availability mt-4">
+            <span class="avail-dot"></span>
+            <span>Available for new opportunities</span>
+          </div>
+
+          <div class="contact-social mt-4">
+            <a href="mailto:dimakunnerosemaryc@gmail.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://linkedin.com/in/rosemary-dimakunne-" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/Rossysomy" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="{% url 'resume' %}" class="social-link" aria-label="Resume"><i class="bi bi-file-earmark-person-fill"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="contact-form-card">
+          <h3 class="contact-form-title">Send Me a Message</h3>
+
+          <form method="post" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="{{ form.name.id_for_label }}" class="form-label">Full Name *</label>
+                {{ form.name }}
+                {% if form.name.errors %}
+                <div class="form-error">{{ form.name.errors|join:', ' }}</div>
+                {% endif %}
+              </div>
+              <div class="col-sm-6">
+                <label for="{{ form.email.id_for_label }}" class="form-label">Email Address *</label>
+                {{ form.email }}
+                {% if form.email.errors %}
+                <div class="form-error">{{ form.email.errors|join:', ' }}</div>
+                {% endif %}
+              </div>
+              <div class="col-12">
+                <label for="{{ form.subject.id_for_label }}" class="form-label">Subject *</label>
+                {{ form.subject }}
+                {% if form.subject.errors %}
+                <div class="form-error">{{ form.subject.errors|join:', ' }}</div>
+                {% endif %}
+              </div>
+              <div class="col-12">
+                <label for="{{ form.message.id_for_label }}" class="form-label">Message *</label>
+                {{ form.message }}
+                {% if form.message.errors %}
+                <div class="form-error">{{ form.message.errors|join:', ' }}</div>
+                {% endif %}
+              </div>
+              <div class="col-12 mt-2">
+                <button type="submit" class="btn btn-primary-custom btn-lg w-100">
+                  <i class="bi bi-send-fill me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
