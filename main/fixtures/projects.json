@@ -15,7 +15,7 @@
     "live_url": "https://techtribe-98d33d8f6790.herokuapp.com/friendsfeed/",
     "featured": true,
     "order": 1,
-    "image": "images/projects/Social_Media_App.jpeg",
+    "image": "projects/Social_Media_App.jpeg",
     "project_file": "",
     "video": "",
     "created_at": "2026-04-24T22:01:16.784Z"
@@ -37,7 +37,7 @@
     "live_url": "",
     "featured": false,
     "order": 4,
-    "image": "images/projects/kyc.jpg-2_2_Small.jpeg",
+    "image": "projects/kyc.jpg-2_2_Small.jpeg",
     "project_file": "",
     "video": "",
     "created_at": "2026-04-24T22:56:20.369Z"
@@ -59,7 +59,7 @@
     "live_url": "",
     "featured": false,
     "order": 3,
-    "image": "images/projects/image.png",
+    "image": "projects/image.png",
     "project_file": "",
     "video": "",
     "created_at": "2026-04-24T23:30:24.220Z"
@@ -81,7 +81,7 @@
     "live_url": "",
     "featured": false,
     "order": 2,
-    "image": "images/projects/image-4.png",
+    "image": "projects/image-4.png",
     "project_file": "",
     "video": "",
     "created_at": "2026-04-24T23:52:40.155Z"
@@ -103,7 +103,7 @@
     "live_url": "",
     "featured": true,
     "order": 1,
-    "image": "images/projects/WhatsApp_Image_2026-04-24_at_20.58.20.jpeg",
+    "image": "projects/WhatsApp_Image_2026-04-24_at_20.58.20.jpeg",
     "project_file": "",
     "video": "",
     "created_at": "2026-04-25T01:54:26.033Z"
@@ -125,7 +125,7 @@
     "live_url": "https://campus-skillswap-rdimakunne.onrender.com",
     "featured": true,
     "order": 2,
-    "image": "images/projects/Screenshot_2026-04-24_at_10.55.26PM.png",
+    "image": "projects/Screenshot_2026-04-24_at_10.55.26PM.png",
     "project_file": "",
     "video": "",
     "created_at": "2026-04-25T04:04:51.440Z"
@@ -147,7 +147,7 @@
     "live_url": "",
     "featured": true,
     "order": 3,
-    "image": "images/projects/Screenshot_2026-05-03_at_11.16.52PM.png",
+    "image": "projects/Screenshot_2026-05-03_at_11.16.52PM.png",
     "project_file": "",
     "video": "",
     "created_at": "2026-04-28T18:33:16.287Z"
@@ -169,7 +169,7 @@
     "live_url": "",
     "featured": true,
     "order": 4,
-    "image": "images/projects/ChatGPT_Image_Feb_18_2026_at_08_25_35_AM.png",
+    "image": "projects/ChatGPT_Image_Feb_18_2026_at_08_25_35_AM.png",
     "project_file": "",
     "video": "project_videos/Ingredientstovideo_21s_202602180922_sf4od.mp4",
     "created_at": "2026-04-28T18:56:38.939Z"
@@ -191,7 +191,7 @@
     "live_url": "https://www.chatbase.co/dashboard/rosemarydimakunne1s-workspace/chatbots",
     "featured": true,
     "order": 9,
-    "image": "images/projects/Screenshot_2026-04-29_at_8.40.59AM.png",
+    "image": "projects/Screenshot_2026-04-29_at_8.40.59AM.png",
     "project_file": "",
     "video": "",
     "created_at": "2026-04-29T13:42:49.730Z"
