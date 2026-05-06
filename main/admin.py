@@ -10,10 +10,13 @@ class ProjectAdmin(admin.ModelAdmin):
     search_fields = ('title', 'description', 'tools_used', 'client_or_company')
     fieldsets = (
         ('Core Info', {
-            'fields': ('title', 'category', 'short_description', 'description', 'image', 'video', 'project_file')
+            'fields': ('title', 'category', 'short_description', 'description', 'image', 'gallery_images', 'video', 'project_file')
         }),
-        ('Details', {
-            'fields': ('tools_used', 'outcome', 'client_or_company', 'duration')
+        ('Project Details', {
+            'fields': ('business_problem', 'key_features', 'role_contribution', 'outcome')
+        }),
+        ('Meta', {
+            'fields': ('tools_used', 'client_or_company', 'duration')
         }),
         ('Links', {
             'fields': ('github_url', 'live_url')

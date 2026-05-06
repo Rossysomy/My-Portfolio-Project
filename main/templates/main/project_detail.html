@@ -45,10 +45,45 @@
         <img src="{{ project.image_url }}" alt="{{ project.title }}" class="img-fluid rounded-card mb-4 w-100" style="object-fit:cover;max-height:400px;" />
         {% endif %}
 
+        {% if project.gallery_image_urls %}
+        <div class="project-gallery mb-4">
+          <div class="row g-3">
+            {% for img_url in project.gallery_image_urls %}
+            <div class="col-sm-6">
+              <a href="{{ img_url }}" target="_blank" rel="noopener" class="gallery-thumb-link">
+                <img src="{{ img_url }}" alt="Project chart {{ forloop.counter }}" class="img-fluid rounded-card gallery-thumb" />
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if project.business_problem %}
         <div class="detail-section">
+          <h3 class="detail-section-title"><i class="bi bi-exclamation-circle me-2"></i>Business Problem</h3>
+          <div class="detail-body">{{ project.business_problem|linebreaks }}</div>
+        </div>
+        {% endif %}
+
+        <div class="detail-section mt-4">
           <h3 class="detail-section-title"><i class="bi bi-file-text me-2"></i>Overview</h3>
           <div class="detail-body">{{ project.description|linebreaks }}</div>
         </div>
+
+        {% if project.key_features %}
+        <div class="detail-section mt-4">
+          <h3 class="detail-section-title"><i class="bi bi-list-check me-2"></i>Key Features &amp; Deliverables</h3>
+          <div class="detail-body">{{ project.key_features|linebreaks }}</div>
+        </div>
+        {% endif %}
+
+        {% if project.role_contribution %}
+        <div class="detail-section mt-4">
+          <h3 class="detail-section-title"><i class="bi bi-person-badge me-2"></i>My Role &amp; Contributions</h3>
+          <div class="detail-body">{{ project.role_contribution|linebreaks }}</div>
+        </div>
+        {% endif %}
 
         {% if project.outcome %}
         <div class="detail-section mt-4">

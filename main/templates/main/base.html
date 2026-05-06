@@ -19,7 +19,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=7" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=8" />
 
   {% block extra_head %}{% endblock %}
 </head>
@@ -37,6 +37,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav gap-1">
         <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a></li>
         <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'projects' or request.resolver_match.url_name == 'project_detail' %}active{% endif %}" href="{% url 'projects' %}">Projects</a></li>
         <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'experience' %}active{% endif %}" href="{% url 'experience' %}">Experience</a></li>
         <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'skills' %}active{% endif %}" href="{% url 'skills' %}">Skills</a></li>

@@ -1,0 +1,239 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}About | Rosemary Dimakunne{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-7">
+        <div class="section-label">About Me</div>
+        <h1 class="page-header-title">Rosemary Dimakunne</h1>
+        <p class="page-header-sub">IT Business Analyst · Project Manager · Cybersecurity Enthusiast</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Profile Section -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+
+      <!-- Photo -->
+      <div class="col-lg-4 text-center">
+        <div class="about-photo-wrap mx-auto">
+          <img src="{% static 'images/rosemary_profile.jpg' %}" alt="Rosemary Dimakunne" class="about-photo img-fluid rounded-card" />
+        </div>
+        <div class="mt-4">
+          <a href="{% url 'resume' %}" class="btn btn-primary-custom w-100 mb-2">
+            <i class="bi bi-file-earmark-arrow-down me-2"></i>Download Resume
+          </a>
+          <a href="{% url 'contact' %}" class="btn btn-outline-custom w-100">
+            <i class="bi bi-send me-2"></i>Get In Touch
+          </a>
+        </div>
+        <div class="social-links mt-4 d-flex justify-content-center gap-3">
+          <a href="https://linkedin.com/in/rosemary-dimakunne-" target="_blank" rel="noopener" class="about-social-link" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/Rossysomy" target="_blank" rel="noopener" class="about-social-link" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="col-lg-8">
+        <h2 class="section-title mb-4">Turning Strategy Into Execution</h2>
+        <p class="section-body">
+          I'm a certified IT Business Analyst and Project Manager (PMP) with a passion for bridging the gap between business strategy and technology delivery. I thrive in dynamic environments where complex requirements must be translated into clear, measurable outcomes.
+        </p>
+        <p class="section-body">
+          My professional journey spans digital transformation, process optimisation, CRM/ERP implementations, and agile delivery across multiple industries. I bring together structured analytical thinking, strong stakeholder communication, and a security-conscious mindset developed through my MS in Information Systems — Cybersecurity at Baylor University.
+        </p>
+        <p class="section-body">
+          Whether I'm facilitating requirements workshops, managing delivery roadmaps, or steering cross-functional teams — my focus is always on stakeholder value and business impact.
+        </p>
+
+        <!-- Quick Facts -->
+        <div class="row g-3 mt-3">
+          <div class="col-sm-6">
+            <div class="about-fact-card">
+              <div class="about-fact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <div class="about-fact-label">Location</div>
+                <div class="about-fact-value">United States</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="about-fact-card">
+              <div class="about-fact-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <div>
+                <div class="about-fact-label">Currently</div>
+                <div class="about-fact-value">MS Information Systems, Baylor University</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="about-fact-card">
+              <div class="about-fact-icon"><i class="bi bi-award-fill"></i></div>
+              <div>
+                <div class="about-fact-label">Certifications</div>
+                <div class="about-fact-value">PMP · Security+ · SAMC · Six Sigma Yellow Belt</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="about-fact-card">
+              <div class="about-fact-icon"><i class="bi bi-briefcase-fill"></i></div>
+              <div>
+                <div class="about-fact-label">Specialisations</div>
+                <div class="about-fact-value">BA · PM · Cybersecurity · Data Analytics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What I Do -->
+<section class="section-pad bg-light-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label">What I Do</div>
+      <h2 class="section-title">Core Competencies</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="value-card text-center h-100">
+          <div class="value-icon"><i class="bi bi-diagram-3-fill"></i></div>
+          <h4>Business Analysis</h4>
+          <p>Requirements elicitation, gap analysis, process mapping, user story writing, and stakeholder workshops.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="value-card text-center h-100">
+          <div class="value-icon"><i class="bi bi-kanban-fill"></i></div>
+          <h4>Project Management</h4>
+          <p>End-to-end delivery using Agile, Scrum, and Waterfall. Risk, scope, and change management.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="value-card text-center h-100">
+          <div class="value-icon"><i class="bi bi-bar-chart-fill"></i></div>
+          <h4>Data &amp; Reporting</h4>
+          <p>Turning data into decisions with SQL, Power BI, and Excel to support strategic planning.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="value-card text-center h-100">
+          <div class="value-icon"><i class="bi bi-shield-check-fill"></i></div>
+          <h4>Cybersecurity</h4>
+          <p>Security compliance (PCI DSS, SOC 2, GDPR, NIST 800-53) and risk-aware IT delivery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-title">Tools &amp; Skills</h2>
+    </div>
+    <div class="row g-3 justify-content-center">
+      {% for skill in skills_list %}
+      <div class="col-auto">
+        <div class="skill-pill">{{ skill }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="{% url 'skills' %}" class="btn btn-outline-custom">Full Skills Breakdown <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Education & Certifications -->
+<section class="section-pad bg-light-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label">Credentials</div>
+      <h2 class="section-title">Education &amp; Certifications</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <h4 class="mb-3"><i class="bi bi-mortarboard-fill me-2 text-accent"></i>Education</h4>
+        <div class="timeline-item mb-4">
+          <div class="timeline-title">MS Information Systems — Cybersecurity</div>
+          <div class="timeline-org">Baylor University &nbsp;·&nbsp; Expected May 2026</div>
+          <p class="timeline-desc">Focused on cybersecurity risk management, IT governance, and secure systems design.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-title">MSc &amp; BSc Computer Science</div>
+          <div class="timeline-org">Imo State University, Nigeria</div>
+          <p class="timeline-desc">Foundations in software engineering, systems analysis, and computing.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h4 class="mb-3"><i class="bi bi-award-fill me-2 text-accent"></i>Certifications</h4>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="cert-card text-center">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <h5>PMP</h5>
+              <p class="cert-issuer">Project Management Institute</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="cert-card text-center">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <h5>CompTIA Security+</h5>
+              <p class="cert-issuer">CompTIA</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="cert-card text-center">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <h5>SAMC</h5>
+              <p class="cert-issuer">SCRUMstudy</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="cert-card text-center">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <h5>Six Sigma Yellow Belt</h5>
+              <p class="cert-issuer">Six Sigma Council</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner section-pad">
+  <div class="container text-center">
+    <h2 class="cta-title">Let's work together</h2>
+    <p class="cta-body">Looking for a results-driven BA or PM to join your team or lead your next project?</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+      <a href="{% url 'contact' %}" class="btn btn-primary-custom btn-lg">
+        <i class="bi bi-send-fill me-2"></i>Get In Touch
+      </a>
+      <a href="{% url 'projects' %}" class="btn btn-outline-light-custom btn-lg">
+        <i class="bi bi-grid-3x3-gap-fill me-2"></i>View My Work
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

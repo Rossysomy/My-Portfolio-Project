@@ -20,11 +20,15 @@ class Project(models.Model):
     outcome = models.TextField(blank=True, help_text='Key results or impact achieved')
     client_or_company = models.CharField(max_length=150, blank=True, help_text='Client or employer (optional)')
     duration = models.CharField(max_length=100, blank=True, help_text='e.g. "6 months" or "Jan 2023 – Jul 2023"')
+    business_problem = models.TextField(blank=True, help_text='The business problem or challenge this project addressed')
+    key_features = models.TextField(blank=True, help_text='Key features or deliverables (one per line)')
+    role_contribution = models.TextField(blank=True, help_text='Your specific role and contributions on this project')
     github_url = models.URLField(blank=True, help_text='GitHub repository link')
     live_url = models.URLField(blank=True, help_text='Live demo / deployed app link')
     featured = models.BooleanField(default=False, help_text='Show on homepage highlights')
     order = models.PositiveIntegerField(default=0, help_text='Display order — lower numbers appear first')
     image = models.ImageField(upload_to='projects/', blank=True, null=True)
+    gallery_images = models.CharField(max_length=1000, blank=True, help_text='Comma-separated image filenames for the gallery, e.g. "chart1.png, chart2.png"')
     project_file = models.FileField(upload_to='project_files/', blank=True, null=True, help_text='Downloadable project file (ZIP, PDF, etc.)')
     video = models.FileField(upload_to='project_videos/', blank=True, null=True, help_text='Project demo video (MP4)')
     created_at = models.DateTimeField(auto_now_add=True)
@@ -47,6 +51,12 @@ class Project(models.Model):
             filename = os.path.basename(str(self.image))
             return f'/static/images/projects/{filename}'
         return ''
+
+    @property
+    def gallery_image_urls(self):
+        if not self.gallery_images:
+            return []
+        return [f'/static/images/projects/{f.strip()}' for f in self.gallery_images.split(',') if f.strip()]
 
 
 class ContactMessage(models.Model):

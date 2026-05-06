@@ -46,6 +46,10 @@ def project_detail(request, pk):
     })
 
 
+def about(request):
+    return render(request, 'main/about.html', {'skills_list': SKILLS_LIST})
+
+
 def experience(request):
     return render(request, 'main/experience.html')
 
