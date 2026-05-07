@@ -23,6 +23,8 @@ class Project(models.Model):
     business_problem = models.TextField(blank=True, help_text='The business problem or challenge this project addressed')
     key_features = models.TextField(blank=True, help_text='Key features or deliverables (one per line)')
     role_contribution = models.TextField(blank=True, help_text='Your specific role and contributions on this project')
+    biggest_challenge = models.TextField(blank=True, help_text='The biggest challenge faced during this project')
+    what_you_learned = models.TextField(blank=True, help_text='Key takeaways or lessons learned')
     github_url = models.URLField(blank=True, help_text='GitHub repository link')
     live_url = models.URLField(blank=True, help_text='Live demo / deployed app link')
     featured = models.BooleanField(default=False, help_text='Show on homepage highlights')

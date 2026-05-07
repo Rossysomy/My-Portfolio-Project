@@ -13,7 +13,7 @@ class ProjectAdmin(admin.ModelAdmin):
             'fields': ('title', 'category', 'short_description', 'description', 'image', 'gallery_images', 'video', 'project_file')
         }),
         ('Project Details', {
-            'fields': ('business_problem', 'key_features', 'role_contribution', 'outcome')
+            'fields': ('business_problem', 'key_features', 'role_contribution', 'outcome', 'biggest_challenge', 'what_you_learned')
         }),
         ('Meta', {
             'fields': ('tools_used', 'client_or_company', 'duration')

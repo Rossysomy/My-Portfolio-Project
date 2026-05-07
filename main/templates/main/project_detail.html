@@ -91,6 +91,20 @@
           <div class="detail-body outcome-body">{{ project.outcome|linebreaks }}</div>
         </div>
         {% endif %}
+
+        {% if project.biggest_challenge %}
+        <div class="detail-section mt-4">
+          <h3 class="detail-section-title"><i class="bi bi-lightning me-2"></i>Biggest Challenge</h3>
+          <div class="detail-body">{{ project.biggest_challenge|linebreaks }}</div>
+        </div>
+        {% endif %}
+
+        {% if project.what_you_learned %}
+        <div class="detail-section mt-4">
+          <h3 class="detail-section-title"><i class="bi bi-lightbulb me-2"></i>What I Learned</h3>
+          <div class="detail-body">{{ project.what_you_learned|linebreaks }}</div>
+        </div>
+        {% endif %}
       </div>
 
       <!-- Sidebar -->
