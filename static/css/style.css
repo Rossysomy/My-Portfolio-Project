@@ -479,6 +479,20 @@ img { max-width: 100%; height: auto; }
 }
 .btn-card-link:hover { color: var(--indigo-dk); gap: 6px; }
 
+.btn-try-it {
+  font-size: .88rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--indigo);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background .2s;
+}
+.btn-try-it:hover { background: var(--indigo-dk); color: #fff; }
+
 /* ===== SKILL PILLS ===== */
 .skill-pill {
   background: var(--surface);

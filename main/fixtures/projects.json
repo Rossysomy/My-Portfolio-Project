@@ -129,7 +129,7 @@
     "biggest_challenge": "- Designing reliable communication between workflows using webhook HTTP calls without breaking the data flow between agents.\r\n- Ensuring scheduling logic returned realistic appointment slots that matched customer preferences while accounting for real-time date and time validation.\r\n-Debugging multi-step automations in n8n Cloud, where one failed node could interrupt the entire orchestration pipeline.",
     "what_you_learned": "- How to design and orchestrate multi-agent workflow architectures using n8n Cloud.\r\n- Practical experience integrating AI models such as Google Gemini into automation pipelines for structured data extraction and natural language generation.\r\n- How to use webhook-based communication to connect modular workflows into a scalable automation system.\r\n- How to design scalable automation systems that reduce manual operational workload while improving response speed and consistency.\r\n- Real-world exposure to process automation, workflow optimization, and operational reengineering concepts commonly used in modern IT and business operations roles.",
     "github_url": "",
-    "live_url": "",
+    "live_url": "https://docs.google.com/forms/d/e/1FAIpQLSfDjOEDmXv9252xmqhL1b5v7tkBvFTgafKQ-oWTub-qPmGGNQ/viewform?usp=sharing&ouid=111184575008886349288",
     "featured": true,
     "order": 1,
     "image": "projects/WhatsApp_Image_2026-04-24_at_20.58.20.jpeg",

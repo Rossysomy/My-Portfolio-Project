@@ -64,10 +64,15 @@
             </div>
             {% endif %}
           </div>
-          <div class="project-card-footer">
+          <div class="project-card-footer d-flex align-items-center gap-3">
             <a href="{% url 'project_detail' project.pk %}" class="btn-card-link">
               View Details <i class="bi bi-arrow-right ms-1"></i>
             </a>
+            {% if project.live_url %}
+            <a href="{{ project.live_url }}" target="_blank" rel="noopener" class="btn-try-it">
+              Try It <i class="bi bi-box-arrow-up-right ms-1"></i>
+            </a>
+            {% endif %}
           </div>
         </div>
       </div>
